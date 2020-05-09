@@ -1,0 +1,28 @@
+.title{
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 5px;
+  height: 60px;
+  line-height: 60px;
+}
+.blank{
+  height: 80px;
+  border-bottom: 1px solid gray;
+  line-height: 80px;
+  margin-left: 2%;
+}
+.inner{
+  height: 80px;
+  margin-top: -63px;
+  line-height: 25px;
+  margin-left: 7%;
+}
+.inner2{
+  height: 80px;
+  margin-top: -51px;
+  line-height: 25px;
+  margin-left: 7%;
+}
+.block{
+  margin-left: 2%;
+}

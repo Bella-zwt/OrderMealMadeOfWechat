@@ -1,0 +1,6 @@
+<view>
+	<image class="img" src="/images/code.jpg"></image>
+</view>
+<view class="txt">
+	<text>会员编号：*********</text>
+</view>

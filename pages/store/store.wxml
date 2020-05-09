@@ -1,0 +1,21 @@
+<view>
+	<view class="title">锦宴公馆</view>
+	<view class="blank">
+		<mp-icon icon="mobile-contacts" color="black" size="{{20}}"></mp-icon>
+		0312-0000000
+	</view>
+	<view class="blank">
+		<mp-icon icon="location" color="black" size="{{20}}"></mp-icon>
+    <view class="inner">河北省保定市恒祥北大街1669号锦观城商业楼3号门脸</view>
+	</view>
+	<view class="blank">
+		<mp-icon icon="time" color="black" size="{{20}}"></mp-icon>
+    <view class="inner2">营业时间：09：00-21：30</view>
+	</view>
+	<view class="blank">
+		<mp-icon icon="done2" color="black" size="{{20}}"></mp-icon>
+		<text class="block">可开发票</text>
+		<text class="block">跨天预定</text>
+		<text class="block">到店自取</text>
+	</view>
+</view>

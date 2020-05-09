@@ -1,0 +1,142 @@
+<view class="container">
+	<view class="header">
+		<text class="header-content">已选商品</text>
+		<view class="deleteCart">
+			<image class="delete-img" src='/images/删除.png'></image>
+			<text class="delete-content">清空购物车</text>
+		</view>
+	</view>
+	<view class="food">
+		<view class="left-wrap">
+			<image class="img" src='/images/dishOne.jpg'></image>
+		</view>
+		<view class="right-wrap">
+			<view class="food-name">
+				<text class="foodTitle">拌饭</text>
+			</view>
+			<view class="foodInfo">
+				<view class="food-detail">
+					<text class="foodPrice">￥20</text>
+				</view>
+				<view class="foodNum">
+					<view class="decrease" bindtap="minus" data-id="0">
+						<image class="down-img" src="/images/禁止提示.png"></image>
+					</view>
+					<view class="count">
+						<text class="countNum">{{items[0].num}}</text>
+					</view>
+					<view class="increase" bindtap="plus" data-id="0">
+						<image class="up-img" src="/images/添加_填充.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="food">
+		<view class="left-wrap">
+			<image class="img" src='/images/dishTwo.jpg'></image>
+		</view>
+		<view class="right-wrap">
+			<view class="food-name">
+				<text class="foodTitle">素拌饭</text>
+			</view>
+			<view class="foodInfo">
+				<view class="food-detail">
+					<text class="foodPrice">￥15</text>
+				</view>
+				<view class="foodNum">
+					<view class="decrease" bindtap="minus" data-id="1">
+						<image class="down-img" src="/images/禁止提示.png"></image>
+					</view>
+					<view class="count">
+						<text class="countNum">{{items[1].num}}</text>
+					</view>
+					<view class="increase" bindtap="plus" data-id="1">
+						<image class="up-img" src="/images/添加_填充.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="food">
+		<view class="left-wrap">
+			<image class="img" src='/images/dishThree.jpg'></image>
+		</view>
+		<view class="right-wrap">
+			<view class="food-name">
+				<text class="foodTitle">酸奶果昔</text>
+			</view>
+			<view class="foodInfo">
+				<view class="food-detail">
+					<text class="foodPrice">￥17</text>
+				</view>
+				<view class="foodNum">
+					<view class="decrease" bindtap="minus" data-id="2">
+						<image class="down-img" src="/images/禁止提示.png"></image>
+					</view>
+					<view class="count">
+						<text class="countNum">{{items[2].num}}</text>
+					</view>
+					<view class="increase" bindtap="plus" data-id="2">
+						<image class="up-img" src="/images/添加_填充.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="food">
+		<view class="left-wrap">
+			<image class="img" src='/images/dishFour.jpg'></image>
+		</view>
+		<view class="right-wrap">
+			<view class="food-name">
+				<text class="foodTitle">干煸豆角</text>
+			</view>
+			<view class="foodInfo">
+				<view class="food-detail">
+					<text class="foodPrice">￥35</text>
+				</view>
+				<view class="foodNum">
+					<view class="decrease" bindtap="minus" data-id="3">
+						<image class="down-img" src="/images/禁止提示.png"></image>
+					</view>
+					<view class="count">
+						<text class="countNum">{{items[3].num}}</text>
+					</view>
+					<view class="increase" bindtap="plus" data-id="3">
+						<image class="up-img" src="/images/添加_填充.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="food">
+		<view class="left-wrap">
+			<image class="img" src='/images/dishFive.jpg'></image>
+		</view>
+		<view class="right-wrap">
+			<view class="food-name">
+				<text class="foodTitle">什锦</text>
+			</view>
+			<view class="foodInfo">
+				<view class="food-detail">
+					<text class="foodPrice">￥20</text>
+				</view>
+				<view class="foodNum">
+					<view class="decrease" bindtap="minus" data-id="4">
+						<image class="down-img" src="/images/禁止提示.png"></image>
+					</view>
+					<view class="count">
+						<text class="countNum">{{items[4].num}}</text>
+					</view>
+					<view class="increase" bindtap="plus" data-id="4">
+						<image class="up-img" src="/images/添加_填充.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="foot">
+		<button class="pay">结算</button>
+	</view>
+</view>

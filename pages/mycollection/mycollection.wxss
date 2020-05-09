@@ -1,0 +1,30 @@
+.food{
+  border-bottom: 0.3px solid lightgray;
+  height: 80px;
+}
+.img{
+  height: 70px;
+  width: 90px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.foodDetail{
+  margin-top: -75px;
+  margin-left: 120px;
+}
+.foodTitle{
+  font-size: 19px;
+  letter-spacing: 5px;
+  margin-left: -100px;
+}
+.foodPrice{
+  float: right;
+  margin-right: 20px;
+  font-size: 19px;
+}
+.foodInfo{
+  color: gray;
+  margin-top: 37px;
+  float: left;
+}

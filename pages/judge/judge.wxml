@@ -1,0 +1,68 @@
+<view class="container">
+	<view class="body-wrap">
+		<view class="content">
+			<view class="left-content">
+				<view class="left-img">
+					<image src="/images/用户.png"></image>
+				</view>
+			</view>
+			<view class="right-content">
+				<view class="judgeName">
+					<text class="userName">匿名用户</text>
+					<text class="judgeTime">2020.03.21</text>
+				</view>
+				<view class="judgeContent">
+					<text class="judgeDetail">非常好，菜品可口，很香，大品牌值得信赖，明天继续</text>
+				</view>
+			</view>
+		</view>
+		<view class="content">
+			<view class="left-content">
+				<view class="left-img">
+					<image src="/images/用户.png"></image>
+				</view>
+			</view>
+			<view class="right-content">
+				<view class="judgeName">
+					<text class="userName">匿名用户</text>
+					<text class="judgeTime">2020.03.21</text>
+				</view>
+				<view class="judgeContent">
+					<text class="judgeDetail">非常好，菜品可口，很香，大品牌值得信赖，明天继续</text>
+				</view>
+			</view>
+		</view>
+		<view class="content">
+			<view class="left-content">
+				<view class="left-img">
+					<image src="/images/用户.png"></image>
+				</view>
+			</view>
+			<view class="right-content">
+				<view class="judgeName">
+					<text class="userName">匿名用户</text>
+					<text class="judgeTime">2020.03.21</text>
+				</view>
+				<view class="judgeContent">
+					<text class="judgeDetail">非常好，菜品可口，很香，大品牌值得信赖，明天继续</text>
+				</view>
+			</view>
+		</view>
+		<view class="content">
+			<view class="left-content">
+				<view class="left-img">
+					<image src="/images/用户.png"></image>
+				</view>
+			</view>
+			<view class="right-content">
+				<view class="judgeName">
+					<text class="userName">匿名用户</text>
+					<text class="judgeTime">2020.03.21</text>
+				</view>
+				<view class="judgeContent">
+					<text class="judgeDetail">非常好，菜品可口，很香，大品牌值得信赖，明天继续</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

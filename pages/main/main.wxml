@@ -1,0 +1,40 @@
+<view class="container">
+	<view class="swiper">
+		<swiper indicator-dots='true' autoplay='true' class='switch'>
+			<swiper-item>
+				<view class='img'>
+					<image class='inner' src='/images/dishOne.jpg'></image>
+				</view>
+			</swiper-item>
+			<swiper-item>
+				<view class='img'>
+					<image class='inner' src='/images/dishTwo.jpg'></image>
+				</view>
+			</swiper-item>
+			<swiper-item>
+				<view class='img'>
+					<image class='inner' src='/images/dishThree.jpg'></image>
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>
+	<view class="body">
+		<view class="function">
+			<view class="order" bindtap='toMenu'>
+				<image src="/images/文本编辑.png"></image>
+				<text>点餐</text>
+			</view>
+      <view class="scan" bindtap='toMember'>
+				<image src="/images/二维码.png"></image>
+				<text>会员卡</text>
+			</view>
+		</view>
+
+		<!--<view>
+      <button class='blank' bindtap='toMenu'>点餐</button>
+    </view>
+    <view>
+      <button class='blank' bindtap='toMember'>会员卡</button>
+    </view>-->
+	</view>
+</view>

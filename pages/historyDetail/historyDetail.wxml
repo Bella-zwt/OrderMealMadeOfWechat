@@ -1,0 +1,89 @@
+<view class="container">
+	<view class="header">
+		<view class="head">
+			<text>订单已完成</text>
+			<mp-icon icon="arrow" color="black" size="{{21}}" class="icon"></mp-icon>
+		</view>
+	</view>
+	<view class="body">
+		<view class="items">
+			<view class="item">
+				<view class="left-wrap">
+					<image src="/images/dishOne.jpg"></image>
+				</view>
+				<view class="right-wrap">
+					<view class="item-info">
+						<text class="name">拌饭</text>
+						<text class="price">￥{{price[0]}}</text>
+					</view>
+					<view class="number">
+						<text>×{{number}}</text>
+					</view>
+				</view>
+			</view>
+
+			<view class="item">
+				<view class="left-wrap">
+					<image src="/images/dishTwo.jpg"></image>
+				</view>
+				<view class="right-wrap">
+					<view class="item-info">
+						<text class="name">素拌饭</text>
+						<text class="price">￥{{price[1]}}</text>
+					</view>
+					<view class="number">
+						<text>×{{number}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="item">
+				<view class="left-wrap">
+					<image src="/images/dishThree.jpg"></image>
+				</view>
+				<view class="right-wrap">
+					<view class="item-info">
+						<text class="name">酸奶果昔</text>
+						<text class="price">￥{{price[2]}}</text>
+					</view>
+					<view class="number">
+						<text>×{{number}}</text>
+					</view>
+				</view>
+			</view>
+
+      <view class="item">
+				<view class="left-wrap">
+					<image src="/images/dishFour.jpg"></image>
+				</view>
+				<view class="right-wrap">
+					<view class="item-info">
+						<text class="name">干煸豆角</text>
+						<text class="price">￥{{price[3]}}</text>
+					</view>
+					<view class="number">
+						<text>×{{number}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="totalPrice">
+				<text>合计￥87</text>
+			</view>
+		</view>
+		<view class="order-info">
+			<view class="order-head">
+				<text>订单信息</text>
+			</view>
+			<view class="order-body">
+				<view class="order">
+					<text class="title">订单号码</text>
+					<text class="content">5632 3441 9644 4637 9</text>
+				</view>
+        <view class="order">
+        <text class="title">下单时间</text>
+        <text class="content">2020-04-11 22:21:30</text>
+        </view>
+			</view>
+		</view>
+
+	</view>
+</view>

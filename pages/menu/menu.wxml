@@ -1,0 +1,43 @@
+<view class="container">
+	<view class="wrap">
+		<view class="header-wrap">
+			<view class="search-warp">
+				<image src="/../images/search.png"></image>
+				<input placeholder="请输入商品名称"/>
+			</view>
+			<image bindtap="toCart" src="/../images/gouwuche.png"></image>
+		</view>
+		<view class="option-wrap">
+			<view class="option selected">
+				<text>点菜</text>
+			</view>
+		</view>
+	</view>
+	<view class="main-wrap">
+		<view class="left">
+			<scroll-view class="sc-l" style="height: {{sc_h-110}}px;" scroll-y="true">
+				<view>
+					<view wx:for="{{foodType.foodtype}}" class="sc-item" bindtap="foodTypeDetail" data-index="{{item.typeId}}">
+						<text>{{item.typeName}}</text>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+		<view class="right">
+			<scroll-view class="sc-r" style="height: {{sc_h-84}}px;" scroll-y="true">
+					<view bindtap="toDetail" class="sc-item" wx:for="{{foods.foods}}" data-post="{{item.foodId}}">
+						<image src="{{item.foodImg}}"></image>
+						<view class="info-wrap">
+							<text class="name">{{item.foodName}}</text>
+							<view class="height"><text>{{item.foodInfo}}</text></view>
+							<text class="pricevip">会员价：¥{{item.memberPrice}}</text>
+							<view class="price-wrap">
+								<text class="price">¥{{item.foodPrice}}</text>
+								<image src="/images/添加_填充.png" class="add-wrap"></image>
+							</view>
+						</view>
+					</view>
+			</scroll-view>
+		</view>
+	</view>
+</view>
