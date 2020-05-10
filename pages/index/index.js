@@ -60,35 +60,27 @@ Page({
     that.setData({
       ee:e
     })
-    // console.log(e.detail)
-    // console.log(e.detail.errMsg)
-    // console.log(e.detail.userInfo)
-    // console.log("1——"+e.detail.rawData)
     wx.setStorage({
       data: e.detail.rawData,
       key: 'e.detail.rawData',
     })
     wx.login({
       success:function(res){
-        // console.log("code:"+res.code)
         wx.request({
           url: 'https://api.weixin.qq.com/sns/jscode2session',
           data:{
-            appid:"wx4566f6277c6271a8",
-            secret:"9124aedcdde06b5ad05f95abd849247f",
+            appid:"wxfbecf646d924a533",
+            secret:"c5fa962b850c542d82bb3feea8616850",
             js_code:res.code,
             grant_type:"authorization_code"
           },
           method:"GET",
           success:function(res){
-            // console.log(res.data)
-            // console.log(e.detail.rawData)
             that.setData({
               ress:res
             });
-           // console.log(that.data)
            var json_info = JSON.parse(that.data.ee.detail.rawData);
-           console.log(json_info);
+          //  console.log(json_info);
             wx.request({
               url: 'http://127.0.0.1/OrderMeal/cus/login',
               data:{
@@ -100,6 +92,10 @@ Page({
               method:"POST",
               success:function(res){
                 console.log(res.data.code)
+                wx.setStorage({
+                  data: that.data.ress.data.openid,
+                  key: 'openId',
+                })
               }
             })
           }
@@ -120,7 +116,6 @@ Page({
     }else{
       app.getUserInfo()
     }
-    //console.log(e.detail.userInfo)
   },
   navigate:function(e){
     wx.switchTab({
