@@ -33,7 +33,7 @@
 							<text class="pricevip">会员价：¥{{item.memberPrice}}</text>
 							<view class="price-wrap">
 								<text class="price">¥{{item.foodPrice}}</text>
-								<image src="/images/添加_填充.png" class="add-wrap"></image>
+								<image data-food="{{item.foodId}}" catchtap="addCart" src="/images/添加_填充.png" class="add-wrap"></image>
 							</view>
 						</view>
 					</view>
