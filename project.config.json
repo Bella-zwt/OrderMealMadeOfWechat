@@ -22,7 +22,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
-	"appid": "wx8a80910b04917498",
+	"appid": "wxfbecf646d924a533",
 	"projectname": "orderMeal",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -87,6 +87,12 @@
 					"name": "pages/menu/menu",
 					"pathName": "pages/menu/menu",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cart/cart",
+					"pathName": "pages/cart/cart",
 					"scene": null
 				}
 			]
