@@ -27,7 +27,7 @@ Page({
 		})
 	},
 	toDetail:function(e){
-		console.log(e)
+		// console.log(e)
 		wx.setStorage({
       data: e.currentTarget.dataset.post,
       key: 'e.currentTarget.dataset.post',
@@ -64,11 +64,29 @@ Page({
 			url: 'http://127.0.0.1/OrderMeal/food/showFood',
 			method:"GET",
 			success:function(res){
-				console.log(res.data);
+				// console.log(res.data);
 				that.setData({
 					foods:res.data
 				})
 			}
 		})
-  }
+	},
+	addCart:function(e){
+		var foodId = e.currentTarget.dataset.food;
+		var openId = wx.getStorageSync('openId');
+		console.log(wx.getStorageSync('openId'))
+		wx.request({
+			url: 'http://127.0.0.1/OrderMeal/cart/addCart',
+			data:{
+					openId:openId,
+					foodId:foodId
+			},
+			method:"GET",
+			success:function(res){
+				wx.showToast({
+					title: res.data.msg
+				})
+			}
+		})
+	}
 })
