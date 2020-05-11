@@ -1,7 +1,7 @@
 <view class="container">
 	<view class="header">
 		<text class="header-content">已选商品</text>
-		<view class="deleteCart">
+		<view class="deleteCart" catchtap="deleteAllCart">
 			<image class="delete-img" src='/images/删除.png'></image>
 			<text class="delete-content">清空购物车</text>
 		</view>
@@ -19,13 +19,13 @@
 					<text class="foodPrice">￥{{item.food.foodPrice}}</text>
 				</view>
 				<view class="foodNum">
-					<view class="decrease" bindtap="minus" data-id="{{index}}">
+					<view class="decrease" bindtap="minus" data-id="{{index}}" data-fid="{{item.food.foodId}}">
 						<image class="down-img" src="/images/禁止提示.png"></image>
 					</view>
 					<view class="count">
 						<text class="countNum" wx:model="{{item.cart.num}}">{{item.cart.num}}</text>
 					</view>
-					<view class="increase" bindtap="plus" data-id="{{index}}">
+					<view class="increase" bindtap="plus" data-id="{{index}}" data-fid="{{item.food.foodId}}">
 						<image class="up-img" src="/images/添加_填充.png"></image>
 					</view>
 				</view>
