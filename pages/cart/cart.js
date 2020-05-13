@@ -5,66 +5,98 @@ Page({
    */
   data: {
     items:[]
-    // items:[{
-    //   id:0,
-    //   num:1,
-    //   minusStatus: 'disabled'
-    // },
-    // {
-    //   id:1,
-    //   num:1,
-    //   minusStatus: 'disabled'
-    // },
-    // {
-    //   id:2,
-    //   num:1,
-    //   minusStatus: 'disabled'
-    // },
-    // {
-    //   id:3,
-    //   num:1,
-    //   minusStatus: 'disabled'
-    // },
-    // {
-    //   id:4,
-    //   num:1,
-    //   minusStatus: 'disabled'
-    // }]
   },
   minus: function(e) {
     var id=e.currentTarget.dataset.id;
+    var fid=e.currentTarget.dataset.fid;
     var num = this.data.items[id].cart.num;
     // 如果大于1时，才可以减  
     if (num > 1) {  
-        num --;  
-    }  
-    // 只有大于一件的时候，才能normal状态，否则disable状态  
-    var minusStatus = num <= 1 ? 'disabled' : 'normal';  
-    // 将数值与状态写回  
-    var flag="items["+id+"].cart.num";
-    // console.log(flag);
-    var condition="items["+id+"].minusStatus";
-    this.setData({  
-        [flag]: num,  
-        condition: minusStatus  
-    });  
+      var id=e.currentTarget.dataset.id;
+      var openId = wx.getStorageSync('openId');
+      var num = this.data.items[id].cart.num;
+      var _this = this;
+      wx.request({
+        url: 'http://127.0.0.1/OrderMeal/cart/subNum',
+        data:{
+          openId:openId,
+          foodId:fid
+        },
+        method:"GET",
+        success:function(res){
+            if(res.statusCode==200){
+              if(res.data.code==200){
+                 // 不作过多考虑自增1 
+                // this.data.items[id].cart.num++; 
+                num --;  
+                // 只有大于一件的时候，才能normal状态，否则disable状态  
+                var minusStatus = num <= 1 ? 'disabled' : 'normal';  
+                // 将数值与状态写回  
+                var flag="items["+id+"].cart.num";
+                var condition="items["+id+"].minusStatus";
+                _this.setData({  
+                    [flag]: num,  
+                    condition: minusStatus  
+                });   
+              }else{
+                wx.showToast({
+                  title: '出错啦！请稍后再试',
+                });
+              }
+            }else{
+              wx.showToast({
+                title: '出错啦！请稍后再试',
+              });
+            }
+          }
+      }); 
+    }else{
+      wx.showToast({
+        title: '已经不能再减啦:)',
+      });
+    }
 },  
 /* 点击加号 */  
 plus: function(e) {  
   var id=e.currentTarget.dataset.id;
+  var fid=e.currentTarget.dataset.fid;
+  var openId = wx.getStorageSync('openId');
   var num = this.data.items[id].cart.num;
-    // 不作过多考虑自增1 
-    // this.data.items[id].cart.num++; 
-    num ++;  
-    // 只有大于一件的时候，才能normal状态，否则disable状态  
-    var minusStatus = num < 1 ? 'disabled' : 'normal';  
-    // 将数值与状态写回  
-    var flag="items["+id+"].cart.num";
-    var condition="items["+id+"].minusStatus";
-    this.setData({  
-        [flag]: num,  
-        condition: minusStatus  
-    });   
+  var _this = this;
+  wx.request({
+    url: 'http://127.0.0.1/OrderMeal/cart/addNum',
+    data:{
+      openId:openId,
+      foodId:fid
+    },
+    method:"GET",
+    success:function(res){
+        if(res.statusCode==200){
+          if(res.data.code==200){
+             // 不作过多考虑自增1 
+            // this.data.items[id].cart.num++; 
+            num ++;  
+            // 只有大于一件的时候，才能normal状态，否则disable状态  
+            var minusStatus = num < 1 ? 'disabled' : 'normal';  
+            // 将数值与状态写回  
+            var flag="items["+id+"].cart.num";
+            var condition="items["+id+"].minusStatus";
+            _this.setData({  
+                [flag]: num,  
+                condition: minusStatus  
+            });   
+          }else{
+            wx.showToast({
+              title: '出错啦！请稍后再试',
+            });
+          }
+        }else{
+          wx.showToast({
+            title: '出错啦！请稍后再试',
+          });
+        }
+    }
+  });
 },
 change: function(e) { 
   var num = e.detail.value;
@@ -75,9 +107,37 @@ change: function(e) {
       flag: num  
   });  
 },
-
-  
-
+deleteAllCart:function(){
+  var openId = wx.getStorageSync('openId');
+  var _this = this;
+  wx.request({
+    url: 'http://127.0.0.1/OrderMeal/cart/deleteAllCart',
+    method:"GET",
+    data:{
+      openId:openId
+    },
+    success:function(res){
+      if(res.statusCode==200){
+        if(res.data.code==200){
+          _this.setData({
+            items:[]
+          });
+          wx.showToast({
+            title: '购物车已清空',
+          });
+        }else{
+          wx.showToast({
+            title: '出错啦！请稍后再试',
+          });
+        }
+      }else{
+        wx.showToast({
+          title: '出错啦！请稍后再试',
+        });
+      }
+    }
+  })
+},
   /**
    * 生命周期函数--监听页面加载
    */
